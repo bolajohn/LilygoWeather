@@ -1,6 +1,11 @@
-/* 
- Share SIM7000G code
- change lines between rows of ##############
+/*
+Code by ABIMBOLA Oladiran Johnson (ladiran@gmail.com) with a lot of help from 
+Bob Johnson (bobjohnson2841@btinternet.com)
+The code can be freely used but remember to give credit accordingly 
+and if you feel like, you can buy me a coffee here: https://www.buymeacoffee.com/ladiran
+
+Share SIM7000G code
+change lines between rows of ##############
 */
 
 //lilygo sim7000G configure
