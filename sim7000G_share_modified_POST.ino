@@ -21,16 +21,17 @@
   #include <Adafruit_BME280.h>
   Adafruit_BME280 bme; // use I2C interface
 //GPRS credentials
-//#################################################################################################################################
- const char apn[]      = "internet.ng.airtel.com";   //  APN
-  const char gprsUser[] = "internet";  //  GPRS User
-  const char gprsPass[] = "internet";  //  GPRS Password
+//############################### CHANGE THINGS BETWEEN THIS SPACE ################################################################
+ const char apn[]      = "INSERT YOUR APN HERE";   //  APN
+  const char gprsUser[] = "insert GPRS username here";  //  GPRS User
+  const char gprsPass[] = "insert GPRS passwrd here";  //  GPRS Password
 //Server details
-  const char server[] = "unclephysics.com.ng";      //set the rest of the api call below
-  const char resource[] = "/weather_esp/sim7000share.php";
+  const char server[] = "insert server address here";      //set the rest of the api call below
+  const char resource[] = "insert your resource address here";
+//API Key and Port Number
+  String apiKeyValue  = "API Key Here"; // this can be changed to anything but must be same in file
+  const int  port = YOUR_PORT_NUMBER;
 //#################################################################################################################################
-  String apiKeyValue  = "tPmAT5Ab3j7F9"; // this can be changed to anything but must be same in /post-esp-data.php file
-  const int  port = 80;
 
   #include <TinyGsmClient.h>
  // #include <ArduinoHttpClient.h>
@@ -385,7 +386,7 @@ void apiCall(){
           
       // You can comment the httpRequestData variable above
       // then, use the httpRequestData variable below (for testing purposes without the BME280 sensor)
-      //String httpRequestData = "api_key=tPmAT5Ab3j7F9&value1=24.75&value2=49.54&value3=1005.14";
+      //String httpRequestData = "api_key";
     
       client.print(String("POST ") + resource + " HTTP/1.1\r\n");
       client.print(String("Host: ") + server + "\r\n");
