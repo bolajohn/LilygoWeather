@@ -2,11 +2,11 @@
 $servername = "unclephysics.com.ng";
 
 // REPLACE with your Database name
-$dbname = "unclephy_sim7000share";
+$dbname = "database name here";
 // REPLACE with Database user
-$username = "unclephy_sim7000";
+$username = "database username here";
 // REPLACE with Database user password
-$password = "BobJohnSon2841";
+$password = "database password here";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
