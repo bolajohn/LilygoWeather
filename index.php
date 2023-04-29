@@ -15,7 +15,7 @@
 //log-in to DBserver
 require_once "config.php";
 
-$sql = "SELECT id, temperature, humidity, pressure, sendtime FROM sim7000Share order by sendtime desc limit 24";
+$sql = "SELECT id, temperature, humidity, pressure, sendtime FROM tableName order by sendtime desc limit 24";
 
 $result = $conn->query($sql);
 
@@ -73,7 +73,7 @@ $conn->close();
   //connect with DBserver
   require_once "config.php";
 
-$sql = "SELECT id, temperature, humidity, pressure, sendtime FROM sim7000Share order by sendtime desc limit 24";
+$sql = "SELECT id, temperature, humidity, pressure, sendtime FROM tableName order by sendtime desc limit 24";
 
 if ($result = $conn->query($sql)) {
     while ($row = $result->fetch_assoc()) {
@@ -119,7 +119,7 @@ echo '<center><b>Location Name: </b> LAFIA, Nigeria <br><b>Latitude:</b> 8.234 Â
 <?php
 			include('config.php');
 			//MySQLi Object-oriented
-			$query=$conn->query("SELECT * FROM sim7000Share ORDER BY sendtime DESC LIMIT 12");
+			$query=$conn->query("SELECT * FROM tableName ORDER BY sendtime DESC LIMIT 12");
 			while($row = $query->fetch_array()) { 
 				?>
 				<tr>
