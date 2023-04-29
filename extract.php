@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Lafia Weather Data</title>
+<title> Weather Data</title>
 <link rel="stylesheet" href="extract_style.css">
 </head>
 <body>
@@ -19,7 +19,7 @@
 <?php
 			include('config.php');
 			//MySQLi Object-oriented
-			$query=$conn->query("SELECT * FROM sim7000Share ORDER BY sendtime DESC LIMIT 12");
+			$query=$conn->query("SELECT * FROM tableName ORDER BY sendtime DESC LIMIT 12");
 			while($row = $query->fetch_array()) { 
 				?>
 				<tr>
