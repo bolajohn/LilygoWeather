@@ -7,16 +7,16 @@ save data from lilygo sim7000g to mysql
 //============configuration===========================================
 //##########################################################
 //server
-  $servername = "unclephysics.com.ng";
+  $servername = "serverName.com";
 //Database name
-  $dbname = "unclephy_sim7000share";
+  $dbname = "databaseName";
 //Database user
-  $username = "unclephy_sim7000";
+  $username = "UserName";
 //Database user password
-  $password = "BobJohnSon2841";
+  $password = "Password";
 //##########################################################  
 //local api key - can be anything but must match esp8266 code
-  $api_key_value = "tPmAT5Ab3j7F9"; // must match IDE code
+  $api_key_value = "tPmATj7F9xxh231y43"; // must match IDE code
 //====================================================================
 // Create connection
       $conn = new mysqli($servername, $username, $password, $dbname);
@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     
     //send data to mysql file    
-        $sql = "INSERT INTO sim7000Share (temperature, humidity, dewpoint, pressure, sendtime)
+        $sql = "INSERT INTO tableName (temperature, humidity, dewpoint, pressure, sendtime)
     VALUES ('" . $temperature . "','" . $humidity . "', '" . $dewpoint . "', '" . $pressure . "', '" . $sendtime . "')";
         
         if ($conn->query($sql) === TRUE) {
