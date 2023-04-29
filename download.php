@@ -1,16 +1,16 @@
 <?php
 include "config.php";
-$filename = 'LafiaWeather_'.time().'.csv';
+$filename = 'Filename_'.time().'.csv';
 
 // POST values
 $from_date = $_POST['from_date'];
 $to_date = $_POST['to_date'];
 
 // Select query
-$query = "SELECT * FROM sim7000Share ORDER BY id asc";
+$query = "SELECT * FROM tableName ORDER BY id asc";
 
 if(isset($_POST['from_date']) && isset($_POST['to_date'])){
-	$query = "SELECT * FROM sim7000Share where sendtime between '".$from_date."' and '".$to_date."' ORDER BY id asc";
+	$query = "SELECT * FROM tableName where sendtime between '".$from_date."' and '".$to_date."' ORDER BY id asc";
 }
 
 $result = mysqli_query($conn,$query);
