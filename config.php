@@ -1,5 +1,5 @@
 <?php
-$servername = "unclephysics.com.ng";
+$servername = "your.server.name.here.com";
 
 // REPLACE with your Database name
 $dbname = "database name here";
